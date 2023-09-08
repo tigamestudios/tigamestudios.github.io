@@ -1,0 +1,170 @@
+/* Font face with fallback fonts */
+@font-face {
+    font-family: 'akashi';
+    src: url("akashi.ttf");
+}
+:root {
+    --default-font-family: 'akashi';
+    --primary-color: rgb(240, 240, 240);
+    --primary-color-dark: rgb(22, 22, 22);
+}
+body.home-body {
+    font-family: var(--default-font-family);
+    user-select: none;
+    padding: 0;
+    margin: 0;
+    transition: 0.4s ease;
+    background-color: #517670ff;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+.home-body .board {
+    width: 97%;
+    border-radius: 20px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    height: max-content;
+    user-select: none;
+    margin: 10px 0;
+}
+.top-board {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+}
+.home-body center .text {
+    padding-top: 5px;
+    padding: 10px;
+}
+.boards-container {
+    background-color: rgba(0, 0, 0, 0.1);
+    width: calc(100% - 30px);
+    margin: 10px auto;
+    padding: 6px;
+    border-radius: 0.5em 4em 0.5em 4em;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    animation: shadow-animation 2s infinite 0.2s;
+}
+@keyframes shadow-animation {
+    0% {
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    }
+}
+footer {
+    margin: 0;
+    color: #ffffff;
+    height: max-content;
+    border-radius: 0.5em 2em 0.5em 2em;
+    margin: auto;
+    margin-bottom: 10px;
+    width: calc(100% - 25px);
+    bottom: 0;
+    padding: 5px 0;
+    position: relative;
+}
+
+footer::before {
+    border-radius: 0.5em 2em 0.5em 2em;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-size: 6%;
+    background-image: url('../713233227553282161/footer-noise.jpg');
+    filter: contrast(1.2);
+    opacity: 1;
+    z-index: -1;
+}
+.home-body .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    height: max-content;
+    padding: 10px;
+}
+.home-body .item-box {
+    transition: 0.3s ease;
+    width: max-content;
+    border-radius: 1em;
+    height: max-content;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 8px;
+    box-shadow: 0 0 2px #141414;
+    border: 2px solid #141414;
+}
+.home-body .item-box:hover {
+    transition: 0.3s ease;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
+    transform: scale(1.14);
+}
+
+.home-body .item-box:active {
+    transition: 0.25s ease;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(1.11);
+}
+.home-body .item-box img{
+    border-radius: 2em;
+}
+@media screen and (prefers-color-scheme: dark) {
+    body.home-body {
+        transition: 0.4s ease;
+        background-color: #20302c;
+        color: white;
+        text-shadow: 0 0 2px rgba(255, 255, 255, 0.664);
+    }
+    .home-body .item-box {
+        transition: 0.3s ease;
+        width: max-content;
+        border-radius: 1em;
+        height: max-content;
+        padding: 15px;
+        background-color: rgba(80, 80, 80, 0.3);
+        margin: 8px;
+        -webkit-box-shadow: 0 0 2px #ffffff;
+        -moz-box-shadow: 0 0 2px #ffffff;
+        box-shadow: 0 0 2px #ffffff;
+        -webkit-border: 2px solid #ffffff;
+        -moz-border: 2px solid #ffffff;
+        border: 2px solid #ffffff;
+    }
+    .home-body .item-box:hover {
+        transition: 0.3s ease;
+        -webkit-box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+        -moz-box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+        background-color: rgba(80, 80, 80, 0.4);
+        transform: scale(1.14);
+    }
+
+    .home-body .item-box:active {
+        transition: 0.25s ease;
+        -webkit-box-shadow: 0 0 4px rgba(150, 150, 150, 0.4);
+        -moz-box-shadow: 0 0 4px rgba(150, 150, 150, 0.4);
+        box-shadow: 0 0 4px rgba(150, 150, 150, 0.4);
+        background-color: rgba(80, 80, 80, 0.5);
+        transform: scale(1.11);
+    }
+    .home-body .boards-container {
+        background-color: rgba(150, 150, 150, 0.1);
+        -webkit-box-shadow: 0 0 4px rgba(150, 150, 150, 0.4);
+        -moz-box-shadow: 0 0 4px rgba(150, 150, 150, 0.4);
+        box-shadow: 0 0 4px rgba(150, 150, 150, 0.4);
+    }
+}

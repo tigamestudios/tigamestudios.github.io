@@ -1,0 +1,55 @@
+body{
+    font-family: 'akashi';
+    background-color: rgb(0, 204, 255);
+    color:black;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+@media screen and (prefers-color-scheme: dark) {
+    body{
+        background-color: blue;
+        color: white;
+    }
+}
+.w-n{
+    margin: 0 10px;
+}
+.wni{
+    border-radius: 1em;
+    border:2px solid black;
+}
+.images{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.button1{
+    margin-left: 1vw;
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 1em;
+    background-color: azure;
+    transition: all 0.3s ease;
+}
+.button1 a{
+    text-decoration: none;
+    color: blue;
+    transition: all 0.3s ease;
+}
+.button1:hover{
+    background-color: blue;
+    transform: scale(1.1);
+}
+.button1 a:hover{
+    color: black;
+}
+.button1:active{
+    transform: scale(1.05);
+}
+summary{
+    cursor: pointer;
+}
