@@ -137,7 +137,7 @@ class TopBoard extends HTMLElement {
                 ${styles}
             </style>
             <div class="top-board">
-                <a href="https://tigamestudios.github.io" target="_parent"><img class="logo" src="https://tigamestudios.github.io/cdn.tigamestudios.github.io/713233227553282161/favicon.png" alt="Logo" draggable="false" style="margin-left:10px;margin-top:21px;cursor:pointer;"><a>
+                <a href="https://tigamestudios.github.io" target="_parent"><img class="logo" src="https://tigamestudios.github.io/cdn/713233227553282161/favicon.png" alt="Logo" draggable="false" style="margin-left:10px;margin-top:21px;cursor:pointer;"><a>
                 <div class="burger-menu" id="burger">
                     <div class="burger-line"></div>
                     <div class="burger-line"></div>
